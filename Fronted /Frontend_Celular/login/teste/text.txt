@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: rgb(37, 23, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background-color: rgb(17, 9, 9);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+  }
+  
+  .login-box h1 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 24px;
+  }
+  
+  .login-box p {
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  form {
+    text-align: left;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .options label {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .options a {
+    color: #ffc506;
+    text-decoration: none;
+  }
+  
+  .options a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    background-color: #ffc506;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #ffc506;
+  }
+  
+  .register {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .register a {
+    color: #ffc506;
+    text-decoration: none;
+  }
+  
+  .register a:hover {
+    text-decoration: underline;
+  }

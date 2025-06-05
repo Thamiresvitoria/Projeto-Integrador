@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="perfil.css">
+  <title>Painel do vendedor</title>
+</head>
+<body>
+
+<form method="POST" action="atualizar_site.php">
+    <label>Nome do Site:</label>
+    <input type="text" name="nome_site">
+    <button type="submit">Atualizar Nome</button>
+</form>
+
+<h3>Adicionar Produto</h3>
+<form method="POST" action="adicionar_produto.php">
+    <label>Nome do Produto:</label>
+    <input type="text" name="nome_produto">
+    <label>Preço:</label>
+    <input type="number" step="0.01" name="preco">
+  <label>Adicionar Imagem:</label>
+    <button type="submit">Adicionar</button>
+</form>
+
+  <form>
+  <label for="imagem">Escolha uma imagem:</label>
+  <input type="file" id="imagem" accept="image/*">
+  <br>
+  <img id="preview" src="#" alt="Preview da imagem" style="display: none; max-width: 300px;">
+  <br>
+  <button type="button" id="remover" style="display: none;">Remover imagem</button>
+</form>
+  
+<h3>Formas de Pagamento</h3>
+<form method="POST" action="atualizar_pagamento.php">
+    <label>Chave Pix:</label>
+    <input type="text" name="chave_pix">
+    <button type="submit">Salvar</button>
+  
+</form>
+  
+  <script src="script.js"></script>
+</body>
+</html>

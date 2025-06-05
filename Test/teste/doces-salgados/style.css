@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffe4e1;
+  padding: 20px;
+}
+
+h1 {
+  color: #b22222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+}
+
+input, button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #b22222;
+  color: white;
+  cursor: pointer;
+}

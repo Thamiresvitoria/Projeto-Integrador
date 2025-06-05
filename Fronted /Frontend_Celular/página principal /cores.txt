@@ -1,0 +1,9 @@
+first-section : background: #321f1f;
+cardapio: background-color:rgb(37,23,23);
+contato: background-color: #241414;
+
+footer -- #111
+
+#261615
+
+body: rbg(46, 31, 31)
