@@ -525,6 +525,7 @@ footer {
     .card {
         padding: 2rem;
     }
+<<<<<<< HEAD
 
     .card h3 { font-size: 2rem; }
     .card p { font-size: 1.6rem; }
@@ -534,3 +535,6 @@ footer {
         gap: 0.5rem;
     }
 }
+=======
+}
+>>>>>>> 89a5954ea797c4caee9b3757cd91f6d4fdf30e51
