@@ -30,7 +30,7 @@ Tecnologias e ferramentas que sustentam a lógica e dados do projeto:
  git clone https://github.com/Thamiresvitoria/Projeto-Integrador-.git
 ```
 
-###2. Crie uma nova branch e depois abra um pull request 
+### 2. Crie uma nova branch e depois abra um pull request 
 
 # 🌲 Possivel estrutura do projeto 
 
