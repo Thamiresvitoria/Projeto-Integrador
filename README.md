@@ -31,6 +31,9 @@ Tecnologias e ferramentas que sustentam a lógica e dados do projeto:
 ```
 
 ### 2. Crie uma nova branch e depois abra um pull request 
+ ``` Bash
+git branch -m master
+```
 
 # 🌲 Possivel estrutura do projeto 
 
