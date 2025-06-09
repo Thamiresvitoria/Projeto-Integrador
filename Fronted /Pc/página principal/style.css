@@ -36,61 +36,60 @@ body {
     padding-left: 1rem;
 }
 
-.buscar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 50px;
-    position: relative;
-
-   
+.form-busca {
+  display: flex;
+  align-items: top;
+  gap: 10px; /* Espaço entre input e botão */
+  justify-content: top;
+  padding-left: 1rem;
 }
-  
-  .buscar i {
-    position: absolute;
-    left: 70px;
-    top: 47%;
-    transform: translateY(-50%);
-    color: #bebcbc;
-    cursor: none;
-  }
 
-  
+.buscar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
+.buscar i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bebcbc;
+  pointer-events: none;
+}
 
 .buscar input {
-    background-color: #f5f5f5;
-    width: 450px;
-    height: 35px;
-    border-radius: 15px;
-
+  background-color: #f5f5f5;
+  width: 450px;
+  padding-left: 35px; /* Espaço para o ícone */
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
 }
 
 .buscar input::placeholder {
-    color: rgba(0, 0, 0, 0.3);
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-left: 50px;
-
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.btn_buscar{
-    margin-left: 10px;
-    width: 65px;
-    height: 35px;
-    border-radius: 7px;
-    font-size: medium;
-    color: white;
-    background-color: #ffc506;
-    cursor: pointer;
+.btn_buscar {
+  height: 35px;
+  width: 75px;
+  border-radius: 7px;
+  font-size: medium;
+  color: white;
+  background-color: #ffc506;
+  cursor: pointer;
+  border: none;
 }
 
 .btn_buscar:hover {
-    background-color: rgb(218, 174, 32);
-    border-bottom: 1px solid #ffffff;
-    color: #f8f8f8;
+  background-color: rgb(218, 174, 32);
+  border-bottom: 1px solid #ffffff;
+  color: #f8f8f8;
 }
-   
 
 
 .logo {
@@ -535,6 +534,3 @@ footer {
         gap: 0.5rem;
     }
 }
-=======
-}
->>>>>>> 89a5954ea797c4caee9b3757cd91f6d4fdf30e51
