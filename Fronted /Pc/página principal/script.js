@@ -33,6 +33,25 @@ function adicionarAoCarrinho(produto) {
   localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
 
+function logout() {
+    localStorage.removeItem("logado");
+    location.reload(); // recarrega a página para atualizar o layout
+  }
+
+  function verificarLogin() {
+    const estaLogado = localStorage.getItem("logado");
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+    if (estaLogado && usuario) {
+      document.getElementById("btn-login").style.display = "none";
+      document.getElementById("perfil").style.display = "flex";
+      document.getElementById("nome-usuario").textContent = usuario.nome;
+    }
+  }
+
+  verificarLogin();
+
+
 
 
 

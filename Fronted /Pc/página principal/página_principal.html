@@ -10,21 +10,32 @@
 <body
     
     <!-- Cabeçalho da página, logo + barra de pesquisa-->
-        <header class="content">
-        <div class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="">  
-        <h3>SalgadosDulce</h3>
-       <form class="form-busca">
-        <div class="buscar">
-        <i class="bi bi-search"></i>
-        <input type="search" placeholder="Ex:HMMMMM bolo de morango" />
-     </div>
-      <button class="btn_buscar" type="submit">Buscar</button>
-</form>
+      <header class="content">
+  <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="">  
+    <h3>SalgadosDulce</h3>
+  </div>
 
-        </header>
+  <form class="form-busca">
+    <div class="buscar">
+      <i class="bi bi-search"></i>
+      <input type="search" placeholder="Ex: HMMMMM bolo de morango" />
+    </div>
+    <button class="btn_buscar" type="submit">Buscar</button>
+  </form>
 
+  <!-- 👇 Seção de login/perfil -->
+  <div class="usuario-logado" style="display: flex; align-items: center; gap: 10px; margin-left: auto;">
+    <button id="btn-login" onclick="window.location.href='login.html'" style="padding: 5px 10px;">Entrar</button>
 
+    <div id="perfil" style="display: none; align-items: center; gap: 10px;">
+      <img src="https://via.placeholder.com/30" alt="Foto de perfil" style="width: 30px; border-radius: 50%;">
+      <span id="nome-usuario" style="font-weight: bold;"></span>
+      <button onclick="logout()" style="padding: 5px 10px;">Logout</button>
+    </div>
+  </div>
+</header>
+    
         </div>
 
         <!-- Navegação + botão de entrar-->
@@ -282,6 +293,6 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
      <h4> Desenvolvido por -> </h4>
    <p>&copy; 2025 Dulce Salgados - Todos os direitos reservados.</p>
   </footer>
-     
+<script src="script.js"></script>
 </body>
 </html>

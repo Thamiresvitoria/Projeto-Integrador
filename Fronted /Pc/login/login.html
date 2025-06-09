@@ -21,20 +21,20 @@
         <div class="signup">
           <form>
             <label for="chk" aria-hidden="true">Cadastro</label>
-            <input type="text" name="txt" placeholder="Nome de Usuario " required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="pswd" placeholder="Senha" required>
-            <input type="password" name="pswd" placeholder="Confirmar Senha" required>
-            <button>Cadastrar</button>
+            <input id="nome" type="text" name="txt" placeholder="Nome de Usuario " required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="pswd" placeholder="Senha" id="senha"required>
+            <input id="senha" type="password" name="pswd" placeholder="Confirmar Senha" required>
+            <button onclick="cadastrar()">Cadastrar</button>
           </form>
         </div>
 
         <div class="login">
           <form>
             <label for="chk" aria-hidden="true">Login</label>
-            <input type="email" name="email" placeholder="Email" required="">
-            <input type="password" name="pswd" placeholder="Senha" required="">
-            <button>Login</button>
+            <input id="email" type="email" name="email" placeholder="Email" required="">
+            <input id="senha" type="password" name="pswd" placeholder="Senha" required="">
+            <button onclick="logar">Login</button>
          <div class="options">
             <label><input type="checkbox" name="lembrar">Lembrar</label>
             <a href="#">Esqueci a senha</a>
@@ -42,5 +42,7 @@
           </form>
         </div>
     </div> 
+    
+    <script src="script.js"></script>
   </body>
 </html>
