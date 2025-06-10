@@ -25,15 +25,13 @@
   </form>
 
   <!-- 👇 Seção de login/perfil -->
-  <div class="usuario-logado" style="display: flex; align-items: center; gap: 10px; margin-left: auto;">
-    <button id="btn-login" onclick="window.location.href='login.html'" style="padding: 5px 10px;">Entrar</button>
-
-    <div id="perfil" style="display: none; align-items: center; gap: 10px;">
-      <img src="https://via.placeholder.com/30" alt="Foto de perfil" style="width: 30px; border-radius: 50%;">
-      <span id="nome-usuario" style="font-weight: bold;"></span>
-      <button onclick="logout()" style="padding: 5px 10px;">Logout</button>
-    </div>
+  <div class="usuario-logado">
+  <div id="perfil">
+    <img id="foto-perfil" src="https://via.placeholder.com/30" alt="Foto de perfil" style="width: 30px; border-radius: 50%;">
+    <span id="nome-usuario"></span>
+    <button onclick="logout()">Logout</button>
   </div>
+</div>
 </header>
     
         </div>
@@ -46,7 +44,7 @@
                 <li><a href="#Cardapio">Cardápio</a></li>
                 <li><a href="#contatos">Contatos</a></li>
                 <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                <button class="entrar"><a href="../login/login.html">Entrar</a></button>
+                <button class="entrar" onclick="window.location.href='../login/login.html'"> Entrar </button>
             </ul>
         </nav>
 

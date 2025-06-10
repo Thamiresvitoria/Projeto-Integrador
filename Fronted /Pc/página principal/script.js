@@ -29,32 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       resultado.textContent = texto ? `Você está buscando por: "${texto}"` : '';
     });
   }
-
-  // VERIFICA LOGIN
-  function verificarLogin() {
-    const estaLogado = localStorage.getItem("logado");
-    const usuario = JSON.parse(localStorage.getItem("usuario"));
-
-    const btnLogin = document.getElementById("btn-login");
-    const perfil = document.getElementById("perfil");
-    const nomeUsuario = document.getElementById("nome-usuario");
-
-    if (estaLogado === "true" && usuario && usuario.nome) {
-      if (btnLogin) btnLogin.style.display = "none";
-      if (perfil) perfil.style.display = "flex";
-      if (nomeUsuario) nomeUsuario.textContent = usuario.nome;
-    }
-  }
-
-  verificarLogin();
-
-  // LOGOUT
-  window.logout = function () {
-    localStorage.removeItem("logado");
-    localStorage.removeItem("usuario");
-    location.reload();
-  };
-
+  
   // FUNÇÃO DE CARRINHO
   window.adicionarAoCarrinho = function (produto) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -62,3 +37,36 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
   };
 });
+
+
+// Verificar login
+
+  function verificarLogin() {
+    const estaLogado = localStorage.getItem("logado");
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+    const btnLogin = document.getElementById("btn-login");
+    const perfil = document.getElementById("perfil");
+    const nomeUsuario = document.getElementById("nome-usuario");
+    const fotoPerfil = document.getElementById("foto-perfil");
+
+    if (estaLogado === "true" && usuario && usuario.nome) {
+      if (btnLogin) btnLogin.style.display = "none";
+      if (perfil) perfil.style.display = "flex";
+      if (nomeUsuario) nomeUsuario.textContent = `Olá, ${usuario.nome}`;
+      if (fotoPerfil) {
+        fotoPerfil.src = usuario.foto || "https://via.placeholder.com/30";
+      }
+    } else {
+      if (btnLogin) btnLogin.style.display = "block";
+      if (perfil) perfil.style.display = "none";
+    }
+  }
+
+  verificarLogin();
+
+  window.logout = function () {
+    localStorage.removeItem("logado");
+    localStorage.removeItem("usuario");
+    location.reload();
+  };
