@@ -1,50 +1,75 @@
-body{
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-family: 'Jost', sans-serif;
-  background-color: rgb(59, 37, 37);    
+LOGIN: CSS
+/* Estilo do corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;       /* Garante altura mínima da tela */
+    font-family: 'Jost', sans-serif;
+    background-color: rgb(59, 37, 37); /* Cor de fundo da página */
+  }
+  
+  /* Botão de voltar (provavelmente um "voltar ao início") */
+  .btn {
+    position: absolute; /* Torna o posicionamento absoluto em relação ao elemento pai ou ao body */
+    top: 0; /* Alinha o botão ao topo */
+    left: 0; /* Alinha o botão à esquerda */
+    width: 10rem; /* Largura do botão */
+    background-color: transparent; /* Cor de fundo transparente */
+    font-weight: 200; /* Peso da fonte */
+    padding: 10px 20px; /* Um pouco de espaçamento dentro do botão */
+    border: 1px solid #ccc; /* Borda leve para o botão */
+    height: 2rem;
+    padding-left: 80px;
+    padding-top: 5px;
+    border: none;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+  
+  .imagem img{
+    position: fixed;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    left: 0;
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
   }
 
-  .btn {
-   margin: 189px 785px;
-   position: fixed ;
-   top: 0;
-   left: 0;
-   width:4rem;
-  background-color: transparent;
-  font-weight: 200;
-
-}
-
-.btn a {
-  color: #e0dede;
-  text-decoration: none;
-}
-  .main{
+  .btn a {
+    color: #e0dede;
+    text-decoration: none;
+  }
+  
+  /* Caixa principal que contém o formulário */
+  .main {
     width: 350px;
     height: 500px;
     overflow: hidden;
-    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    background: url("...") no-repeat center/cover; /* Imagem de fundo */
     border-radius: 10px;
-    box-shadow: 5px 20px 50px #000;
+    box-shadow: 5px 20px 50px #000; /* Sombra para profundidade */
   }
-
-  #chk{
+  
+  /* Checkbox escondido usado para alternar entre login e cadastro */
+  #chk {
     display: none;
   }
-
-  .signup{
+  
+  /* Seção de cadastro */
+  .signup {
     position: relative;
-    width:100%;
+    width: 100%;
     height: 100%;
   }
-
-
-  label{
+  
+  /* Rótulos (labels) dos campos e botões */
+  label {
     color: #fff;
     font-size: 2.3em;
     justify-content: center;
@@ -54,9 +79,9 @@ body{
     cursor: pointer;
     transition: .5s ease-in-out;
   }
-
-
-  input{
+  
+  /* Estilo dos campos de entrada */
+  input {
     width: 60%;
     height: 10px;
     background: #e0dede;
@@ -68,8 +93,9 @@ body{
     outline: none;
     border-radius: 5px;
   }
-
-  button{
+  
+  /* Botões (ex: enviar formulário) */
+  button {
     width: 60%;
     height: 40px;
     margin: 10px auto;
@@ -86,66 +112,72 @@ body{
     transition: .2s ease-in;
     cursor: pointer;
   }
-
-  button:hover{
-    background: #ffc506;
-  }
-
   
-  .login{
+  /* Efeito hover do botão */
+  
+  
+  /* Seção de login, aparece por cima inicialmente */
+  .login {
     height: 460px;
     background: #eee;
-    border-radius: 60% / 10%;
-    transform: translateY(-180px);
+    border-radius: 60% / 10%; /* Formato arredondado diferente */
+    transform: translateY(-180px); /* Posição inicial deslocada */
     transition: .8s ease-in-out;
   }
-
-
-  .login label{
+  
+  /* Label dentro da tela de login */
+  .login label {
     color: #ffc506;
-    transform: scale(.6);
+    transform: scale(.6); /* Escala menor quando inativo */
   }
-
-  #chk:checked ~ .login{
+  
+  /* Quando o checkbox é marcado, a tela de login sobe */
+  #chk:checked ~ .login {
     transform: translateY(-500px);
   }
-  #chk:checked ~ .login label{
-    transform: scale(1);	
+  
+  /* Ao ativar login: texto do label aumenta */
+  #chk:checked ~ .login label {
+    transform: scale(1);
   }
-  #chk:checked ~ .signup label{
+  
+  /* Ao ativar login: label de signup diminui */
+  #chk:checked ~ .signup label {
     transform: scale(.6);
   }
-
+  
+  /* Opções adicionais (ex: lembrar senha, links etc.) */
   .options {
-display: flex;
-align-items: top;
-font-size: 9px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 20px;
   }
-
-  .options {
-display: flex;
-align-items: center;
-font-size: 18px;
-margin-bottom: 20px;
-
-}
-
-.options label {
-display: flex;
-align-items: center;
-font-size: 18px;
-}
-
-.options a {
-color: #ffc506;
-text-decoration: none;
-}
-
-.options a:hover {
-text-decoration: underline;
-}
-.options input[type="checkbox"] {
-accent-color: #ffc506; /* Para cor personalizada no checkbox */
-}
-      #chk:checked ~ .signup label{
-        transform: scale(.6); }
+  
+  /* Label dentro das opções */
+  .options label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  /* Links dentro das opções (ex: esqueceu a senha?) */
+  .options a {
+    color: #ffc506;
+    text-decoration: none;
+  }
+  
+  /* Hover nos links das opções */
+  .options a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Personalização da cor do checkbox */
+  .options input[type="checkbox"] {
+    accent-color: #ffc506;
+  }
+  
+  /* Repetição necessária para manter consistência com o estado do checkbox */
+  #chk:checked ~ .signup label {
+    transform: scale(.6);
+  }
