@@ -1,35 +1,40 @@
+/* Importa uma fonte personalizada do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..90');
 
+/* Reset e configurações básicas */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    border: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  text-decoration: none;
 }
 
+/* Corpo da página */
 body {
   font-family: Arial, sans-serif;
-  background: rgb(37, 23, 23);
+  background: rgb(37, 23, 23); /* Fundo escuro */
   margin: 0;
   padding: 20px;
 }
 
-.container h1{
-    margin: 1rem;
+/* Título principal */
+.container h1 {
+  margin: 1rem;
 }
 
+/* Contêiner principal dos pedidos */
 .container {
   background: #ffffff;
   padding: 20px;
-  max-width: 500px;
+  max-width: 800px;
   margin: auto;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+/* Cada pedido individual */
 .pedido {
   background-color: #ffffff;
   padding: 15px;
@@ -37,16 +42,19 @@ body {
   margin-bottom: 20px;
 }
 
+/* Título do pedido */
 .pedido h2 {
   margin-bottom: 10px;
 }
 
+/* Lista de itens do pedido */
 .pedido ul {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 10px;
 }
 
+/* Cada item na lista do pedido */
 .pedido li {
   background-color: #ffffff;
   padding: 10px;
@@ -55,20 +63,22 @@ body {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* Total do pedido */
 .pedido .total {
-    background-color: #6b4f4f;
-    color:white;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: right;
+  background-color: #6b4f4f;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: right;
 }
 
+/* Espaçamento entre seções */
 section {
   margin-bottom: 20px;
-  
 }
 
+/* Cartão de produto (item visualizado antes de ser pedido) */
 .card-produto {
   display: flex;
   align-items: center;
@@ -80,38 +90,44 @@ section {
   gap: 10px;
 }
 
+/* Ícones dentro do cartão */
 .card-produto i {
   font-size: 1.4rem;
   color: #6c757d;
 }
 
+/* Nome do produto */
 .card-produto .nome {
   flex-grow: 1;
   font-weight: 500;
 }
 
+/* Preço do produto */
 .card-produto .preco {
   font-weight: bold;
 }
 
-.entrega{
-    padding: 20px;
+/* Área de entrega */
+.entrega {
+  padding: 20px;
 }
 
+/* Estilo dos rótulos (labels) */
 label {
-    color:black;
-    display: inline-block;
-    margin-right: 9px;
-    
+  color: black;
+  display: inline-block;
+  margin-right: 9px;
 }
 
+/* Container com opções de entrega */
 .opcoes-entrega {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; /* permite quebra se necessário */
+  flex-wrap: wrap;
   margin-bottom: 15px;
 }
 
+/* Cada opção de entrega */
 .opcao-entrega {
   display: flex;
   align-items: center;
@@ -124,18 +140,22 @@ label {
   transition: border 0.2s ease;
 }
 
+/* Hover nas opções de entrega */
 .opcao-entrega:hover {
-  border: 2px solid #007bff;
+  border: 2px solid  #6c757d;
 }
 
+/* Cor do botão de radio personalizado */
 .opcao-entrega input[type="radio"] {
   accent-color: #ffc506;
 }
 
+/* Área de pagamento */
 .pagamento {
-    padding: 20px;
+  padding: 20px;
 }
 
+/* Container com opções de pagamento */
 .opcoes {
   display: flex;
   gap: 20px;
@@ -143,65 +163,172 @@ label {
   margin-bottom: 15px;
 }
 
+/* Cada opção de pagamento */
 .opcao-pagamento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    background-color: #f5f5f5;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s ease;
 }
 
+/* Hover nas opções de pagamento */
 .opcao-pagamento:hover {
   border: 2px solid #c9c3c3;
 }
 
+/* Personalização do botão de rádio de pagamento */
 .opcao-pagamento input[type="radio"] {
   accent-color: #ffc506;
 }
 
+/* Informações adicionais quando a opção PIX for escolhida */
 #pix-info {
-  background-color:#DCDCDC;
+  background-color: #DCDCDC;
   padding: 10px;
   border-left: 4px solid #6b4f4f;
   border-radius: 4px;
   max-width: 300px;
-    
 }
 
-.total{
-    margin-top:0.4rem;
+/* Margem superior do total */
+.total {
+  margin-top: 0.4rem;
 }
 
+/* Estilo para campos de entrada de texto */
 input[type="text"] {
   width: 100%;
   padding: 8px;
   margin: 5px 0;
 }
 
+/* Oculta elementos (usado para mostrar/ocultar opções) */
 .oculto {
   display: none;
 }
 
+/* Botão de ação (ex: enviar pedido) */
 button {
-    background: #6b4f4f;
-    font-weight: bold;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 20px;
-    width: 100%;
-    font-size: 16px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
+  background: #6b4f4f;
+  font-weight: bold;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
 
+/* Efeito hover no botão */
 button:hover {
   background-color: rgb(70, 62, 62);
   border-bottom: 4px solid #ffc506;
-   color: #ffc506;
+  color: #ffc506;
+}
+
+.content {
+  width: 100vw;
+  height: auto;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(34, 34, 41);
+  position: fixed; /* Fixa o menu no topo da tela */
+  padding: 0 1rem;
+  z-index: 1000;
+  align-items: center;
+}
+
+.logo {
+  min-width: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 1.6rem;
+}
+
+/* Imagem da logo */
+.logo img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+/* Nome ao lado da logo */
+.logo h3 {
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  color: rgb(236, 234, 234);
+  border-radius: 5px;
+}
+
+nav {
+  width: 100%;
+  order: 3;
+}
+
+/* Lista de links do menu */
+.content .list-menu {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+  gap: 2rem;
+  transition: all 200ms ease-in;
+  justify-content: right;
+
+}
+
+/* Botões dentro do menu SAIR   */
+.list-menu button  {
+  padding: 1rem 3rem;
+  margin-right: 5rem;
+  font-size: large;
+  background-color: #ffc506;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Links dentro dos botões */
+.list-menu button a {
+  color: white;
+}
+
+/* Cor ao clicar no botão */
+.list-menu button a:active {
+  color: #f5f5f5;
+}
+
+/* Efeito hover no botão do menu */
+.list-menu button:hover {
+  background-color: rgb(218, 174, 32);
+  border-bottom: 1px solid #ffffff;
+  color: #f8f8f8;
+}
+
+/* Links de navegação */
+.content .list-menu li a {
+  padding: 1rem 2rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: small;
+}
+
+/* Hover nos links do menu */
+.content .list-menu li a:hover {
+  background-color: rgb(70, 62, 62);
+  border-bottom: 4px solid #ffc506;
+  color: #ffc506;
 }

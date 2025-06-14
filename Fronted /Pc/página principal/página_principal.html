@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
+     <!-- Importa o CSS principal -->
+    <link rel="stylesheet" href="principal.css"> 
+     <!-- Ícones do Bootstrap (lupa, carrinho etc.) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Salgados Dulce</title>
 </head>
@@ -11,13 +13,15 @@
     
     <!-- Cabeçalho da página, logo + barra de pesquisa-->
       <header class="content">
+         <!-- Logo da marca -->
   <div class="logo">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="">  
     <h3>SalgadosDulce</h3>
   </div>
-
+  <!-- Formulário de busca -->
   <form class="form-busca">
     <div class="buscar">
+      <!-- Ícone da lupa dentro do input -->
       <i class="bi bi-search"></i>
       <input type="search" placeholder="Ex: HMMMMM bolo de morango" />
     </div>
@@ -25,43 +29,40 @@
   </form>
 
   <!-- 👇 Seção de login/perfil -->
-  <div class="usuario-logado">
-  <div id="perfil">
-    <img id="foto-perfil" src="https://via.placeholder.com/30" alt="Foto de perfil" style="width: 30px; border-radius: 50%;">
-    <span id="nome-usuario"></span>
-    <button onclick="logout()">Logout</button>
-  </div>
-</div>
-</header>
+ 
+
     
         </div>
 
-        <!-- Navegação + botão de entrar-->
+        <!--Links principais Navegação + botão de entrar-->
         <nav>
-            <ul class="list-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li><a href="#Cardapio">Cardápio</a></li>
-                <li><a href="#contatos">Contatos</a></li>
-                <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                <button class="entrar" onclick="window.location.href='../login/login.html'"> Entrar </button>
-            </ul>
+          <ul class="list-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#sobre-nos">Sobre nós</a></li>
+              <li><a href="#Cardapio">Cardápio</a></li>
+              <li><a href="#contatos">Contatos</a></li>
+              <li><a href="#"><i class="bi bi-cart"></i></a></li>
+              <button class="entrar" onclick="window.location.href='../login/login.html'"> Entrar </button>
+          </ul>
+      </nav>
+
         </nav>
 
 
       
     </header>
 
-    <!-- Frase no meio da página -->
+    <!-- SEÇÃO PRINCIPAL Frase no meio da página -->
     <section class="first-section">
           <div class="conteudo-principal">
+             <!-- Título e subtítulo de boas-vindas -->
             <h1>A vida é salgada, mas aqui é uma delícia!</h1>
             <h2>Sabor que abraça!</h2>
           </div>
         
     </section>   
 
-    <!-- sobre nós -->
+      <!-- ====== SOBRE NÓS ====== -->
     
     <section class="sobre-nos" id="sobre-nos">
         <div class=main>
@@ -71,7 +72,7 @@
 quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
         </div>
         <div class="image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHR-fBtld5Am-01t2KyAgFB5JWiUmd8pN7fDvCjJBSDny4Y0c2rus5BqR&s=10" alt=""> 
+            <img src="https://cdn.discordapp.com/attachments/1375646595764195410/1382947593423814818/1749790781827.png?ex=684d01d0&is=684bb050&hm=c8741879e21805f2ac230d2b06dd1c7a137a0ab04b953180c97295f2079f0710&" alt=""> 
         </div>
         </div>
     </section>
@@ -263,34 +264,33 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
           
       </section>
 
-    <!-- contatos -->
-           <section class="contatos" id="contatos"> 
-              <h1>Contate-nos:</h1>
-               
-               <div class="contatos-secao">
-                   <div>
-                       <i class="bi bi-whatsapp"></i>
-                       <span> 81 99999-9999</span>
-                   </div>
-                   
-                   <div>
-                     <i class="bi bi-instagram"></i>
-                    <span> @Naotemanada</span>
-                   </div>
-                   
-                   <div>
-                    <i class="bi bi-geo-alt"></i>
-                    <span> Av. ali embaido, nao sei, 123, Recife-PE, Brasil.</span>
-                </div>
-                   
-               </div>
-           </section>
+    <!-- ====== CONTATOS ====== -->
 
-    <!-- footer  -->
+           <section class="footer-contato">
+            <h2>CONTATE-NOS:</h2>
+            <div class="contato-info">
+              <div class="contato-item">
+                <i class="bi bi-whatsapp"></i>
+                <p>(81) 99999-9999</p>
+              </div>
+              <div class="contato-item">
+                <i class="bi bi-instagram"></i>
+                <p>@Naotemanada</p>
+              </div>
+              <div class="contato-item">
+                <i class="bi bi-geo-alt"></i>
+                <p>Av. Ali Embaixo, nº 123<br>Recife - PE, Brasil</p>
+              </div>
+            </div>
+          </section>
+          
+
+   <!-- ====== RODAPÉ ====== -->
  <footer>
      <h4> Desenvolvido por -> </h4>
    <p>&copy; 2025 Dulce Salgados - Todos os direitos reservados.</p>
   </footer>
 <script src="script.js"></script>
+
 </body>
 </html>

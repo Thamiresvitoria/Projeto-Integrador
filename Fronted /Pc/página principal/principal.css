@@ -1,0 +1,688 @@
+/* Importa a fonte Alegreya do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900&display=swap');
+
+/* Reset de estilos globais e configurações padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Alegreya', serif;
+}
+
+/* Configurações básicas do HTML */
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 60.5%; /* Facilita o uso de rem para responsividade */
+    overflow-x: hidden;
+}
+
+/* Tamanho base da fonte do corpo */
+body {
+    font-size: 1.6rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+/* Seção de perfil (inicialmente oculta) */
+#perfil {
+
+  align-items: center;
+  gap: 10px;
+}
+
+/* ================= Menu ================= */
+
+/* Container principal do menu */
+.content {
+    width: 100vw;
+    height: auto;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 41);
+    position: fixed; /* Fixa o menu no topo da tela */
+    padding: 0 1rem;
+    z-index: 1000;
+    align-items: center;
+}
+
+/* Formulário de busca dentro do menu */
+.form-busca {
+  display: flex;
+  align-items: top;
+  gap: 10px;
+  justify-content: top;
+  padding-left: 1rem;
+  flex-grow: 1;
+  min-width: 200px;
+  max-width: 100%;
+}
+
+/* Container da barra de busca e ícone */
+.buscar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Ícone dentro do campo de busca */
+.buscar i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bebcbc;
+  pointer-events: none;
+}
+
+/* Input da barra de busca */
+.buscar input {
+  background-color: #f5f5f5;
+  width: 450px;
+  padding-left: 35px; /* Espaço reservado para o ícone */
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+  border-radius: 15px;
+  outline: none;
+}
+
+/* Estilo do placeholder */
+.buscar input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de buscar */
+.btn_buscar {
+  height: 35px;
+  width: 75px;
+  border-radius: 7px;
+  font-size: medium;
+  color: white;
+  background-color: #ffc506;
+  cursor: pointer;
+}
+
+
+
+/* Efeito hover no botão de busca */
+.btn_buscar:hover {
+  background-color:rgb(218, 174, 32);;
+  border-bottom: 1px solid #ffffff;
+  color: #f8f8f8;
+}
+
+/* Usuário Logado */
+
+.list-menu .usuario-logado {
+    color: #ffffff;
+}
+
+.list-menu .usuario-logado i {
+    font-size: 4rem;
+}
+
+.list-menu .usuario-logado im {
+    width: 30px; 
+    border-radius: 50%;
+}
+    .usuario-logado {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 15px; /* ou ajuste conforme o layout */
+}
+
+.usuario-logado .user-pic {
+  font-size: 28px; /* Tamanho ajustado, pode variar */
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#nome-usuario {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+    .sub-menu-wrap {
+      position: absolute;
+      top: 100%;
+      right: 2%;
+      margin-left: 100px;
+      width: 320px;
+      background-color: rgb(34, 34, 41);
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .sub-menu-wrap.open-menu {
+      max-height: 500px;
+    }
+
+    .sub-menu {
+      padding: 20px;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .user-info img {
+      width: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .user-info h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .sub-menu hr {
+      border: none;
+      height: 1px;
+      background: #ffffff;
+      margin: 15px 0;
+    }
+
+    .sub-menu-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #ffffff;
+      margin: 12px 0;
+      transition: background 0.2s;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .sub-menu-link:hover {
+      background: rgb(223, 152, 71);
+    }
+
+    .sub-menu-link img {
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .sub-menu-link p {
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .sub-menu-link span {
+      font-size: 30px;
+      color: #888;
+    }
+
+/* Logo no canto do menu */
+.logo {
+    min-width: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.6rem;
+}
+
+/* Imagem da logo */
+.logo img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+/* Nome ao lado da logo */
+.logo h3 {
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    color: rgb(236, 234, 234);
+    border-radius: 5px;
+}
+
+nav {
+    width: 100%;
+    order: 3;
+}
+
+/* Lista de links do menu */
+.content .list-menu {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    gap: 2rem;
+    transition: all 200ms ease-in;
+    justify-content: right;
+
+}
+
+/* Botões dentro do menu SAIR   */
+.list-menu button  {
+    padding: 1rem 3rem;
+    margin-right: 5rem;
+    font-size: large;
+    background-color: #ffc506;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* Links dentro dos botões */
+.list-menu button a {
+    color: white;
+}
+
+/* Cor ao clicar no botão */
+.list-menu button a:active {
+    color: #f5f5f5;
+}
+
+/* Efeito hover no botão do menu */
+.list-menu button:hover {
+    background-color: rgb(218, 174, 32);
+    border-bottom: 1px solid #ffffff;
+    color: #f8f8f8;
+}
+
+/* Links de navegação */
+.content .list-menu li a {
+    padding: 1rem 2rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: small;
+}
+
+/* Hover nos links do menu */
+.content .list-menu li a:hover {
+    background-color: rgb(70, 62, 62);
+    border-bottom: 4px solid #ffc506;
+    color: #ffc506;
+}
+
+/* ================= Primeira seção ================= */
+
+.first-section {
+    height: 70vh;
+    background-color: rgb(37, 23, 23);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Título principal */
+.first-section h1 {
+    color: rgb(206, 135, 55);
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo */
+.first-section h2 {
+    color: bisque;
+    font-size: 3rem;
+    font-weight: 450;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+/* ================= Seção "Sobre Nós" ================= */
+
+.sobre-nos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    background-color: rgba(31, 20, 20, 1.2);
+}
+
+/* Container principal */
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Texto da seção */
+.titulo {
+    color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Título "Sobre Nós" */
+.titulo h1 {
+    margin-left: 90px;
+    font-size: 5rem;
+    padding-bottom: 1.6rem;
+}
+
+/* Descrição da seção */
+.titulo p {
+    font-size: 2rem;
+    padding-left: 1rem;
+    max-width: 400px;
+    margin-left: 100px;
+}
+
+/* Container da imagem */
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Imagem da seção */
+.image img {
+    width: 600px;
+    height: 400px;
+}
+
+/* ================= Cardápio ================= */
+
+.Cardapio {
+    background-color: rgb(37, 23, 23);
+    padding: 2rem;
+}
+
+/* Título da seção */
+.Cardapio h1 {
+    color: bisque;
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+/* Botões de filtro do cardápio */
+.Cardapio button {
+     margin: 0 0.5rem;
+     font-size: 25px;
+     padding: 1.5rem 1.7rem;
+     background-color:rgb(219, 147, 65);;
+     color: white;
+     border-radius: 7px;
+     cursor: pointer;
+}
+
+/* Container dos botões */
+.menu {
+    justify-content: center;
+    display: flex;
+}
+
+/* Efeito hover nos botões */
+.Cardapio button:hover {
+    background-color:rgb(187, 112, 27);
+    border-bottom: 4px solid rgb(100, 55, 4);
+    color: #ffffff;
+}
+
+/* Grade de cards */
+.Todos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 5rem 25rem;
+}
+
+/* Card individual */
+.card {
+    background-color: #eee0e0;
+    padding: 5rem 10rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(128, 111, 111, 0.1);
+    text-align: center;
+}
+
+/* Imagem do card */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid rgb(218, 160, 1);
+    border-style: outset;
+}
+
+/* Nome do item */
+.card h3 {
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+/* Preço do item */
+.card p {
+    margin: 1rem 0;
+    font-size: 3rem;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Botão do card */
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 25px;
+    background-color: #4d3737;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover no botão do card */
+.card button:hover {
+    background-color: rgb(26, 24, 24);
+    border-bottom: 4px solid #ffc506;
+    color: #ffc506;
+}
+
+/* ================= Contatos ================= */
+
+.contatos {
+    background-color: rgb(37, 23, 23);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Título da seção de contatos */
+.contatos h1 {
+    text-transform: uppercase;
+    margin: 1rem 0 1.5rem 0;
+}
+
+/* Container dos contatos */
+.contatos-secao {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 1rem;
+}
+
+/* Estilo individual de cada item de contato */
+.contatos-secao div {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+/* Hover no item de contato */
+.contatos-secao div:hover {
+    color: #ffc506;
+    transition: all 200ms ease-in;
+}
+
+/* ================= Contato================= */
+
+.footer-contato {
+  background-color: #251717;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+}
+
+
+.footer-contato h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contato-info {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.contato-info:hover {
+  color: #e6b864;
+  transition: all 200ms ease-in;
+}
+
+.contato-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.contato-item i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contato-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+/* ================= Rodapé ================= */
+
+footer {
+    background-color: rgb(37, 23, 23);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsividade */
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+
+    /* Ajustes gerais para desktops maiores */
+    html {
+      font-size: 62.5%;
+    }
+  
+    .content {
+      padding: 0.2rem;
+    }
+  
+    .buscar input {
+      width: 100%;
+      max-width: 500px;
+    }
+  
+    .btn_buscar {
+      width: auto;
+    }
+  
+    .main {
+      max-width: 1400px;
+    }
+  
+    .titulo h1 {
+      font-size: 5rem;
+    }
+  
+    .titulo p {
+      font-size: 2rem;
+      max-width: 500px;
+    }
+  
+    .image img {
+      max-width: 500px;
+      height: auto;
+    }
+  
+    .Todos {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 4rem 10rem;
+    }
+  
+    .card {
+      padding: 3rem;
+    }
+  
+    .card h3 {
+      font-size: 2.8rem;
+    }
+  
+    .card p {
+      font-size: 2.4rem;
+    }
+  
+    .card button {
+      font-size: 2rem;
+    }
+  
+    .Cardapio h1 {
+      font-size: 4rem;
+    }
+  
+    .Cardapio button {
+      font-size: 2rem;
+      padding: 1.2rem 1.5rem;
+    }
+  
+    .contatos h1 {
+      font-size: 3rem;
+    }
+  
+    .contatos-secao {
+      font-size: 2.2rem;
+    }
+  
+  }

@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   // MENU TOGGLE
   const toggle = document.getElementById("menu-toggle");
@@ -63,10 +64,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  verificarLogin();
+   function toggleMenu() {
+      document.getElementById("subMenu").classList.toggle("open-menu");
+    }
 
-  window.logout = function () {
-    localStorage.removeItem("logado");
-    localStorage.removeItem("usuario");
-    location.reload();
-  };
+    // Fecha o menu se clicar fora
+    window.addEventListener("click", function(e) {
+      const menu = document.getElementById("subMenu");
+      const button = document.querySelector(".user-pic");
+
+      if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.classList.remove("open-menu");
+      }
+    });
+
+    // Logout
+
+    function logout() {
+      localStorage.removeItem("logado");
+      localStorage.removeItem("usuario");
+      sessionStorage.clear();
+      window.location.href = "página_principal.html"; // Redireciona para login após logout
+    }
+    
+    function verificarLogin() {
+      const logado = localStorage.getItem("logado");
+      const usuario = localStorage.getItem("usuario");
+    
+      if (!logado || !usuario) {
+        window.location.href = "../login/login.html"; // Corrigido
+      }
+    }
+    
+    // Se estiver na página principal protegida, verifica login
+    if (window.location.pathname.includes("poslogin_principal.html")) {
+      verificarLogin();
+    }
