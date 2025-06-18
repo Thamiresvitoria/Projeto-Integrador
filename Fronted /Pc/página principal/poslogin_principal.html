@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Importa o CSS principal -->
-    <link rel="stylesheet" href="principal.css"> 
+    <link rel="stylesheet" href="principal.css">
      <!-- Ícones do Bootstrap (lupa, carrinho etc.) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Salgados Dulce</title>
@@ -12,88 +12,93 @@
 <body
     
     <!-- Cabeçalho da página, logo + barra de pesquisa-->
-      <header class="content">
-         <!-- Logo da marca -->
-  <div class="logo">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="">  
-    <h3>SalgadosDulce</h3>
-  </div>
-  <!-- Formulário de busca -->
-  <form class="form-busca">
-    <div class="buscar">
-      <!-- Ícone da lupa dentro do input -->
-      <i class="bi bi-search"></i>
-      <input type="search" placeholder="Ex: HMMMMM bolo de morango" />
+     <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salgados Dulce</title>
+
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Ícones Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <header class="content">
+    <!-- Botão hambúrguer (só aparece no mobile) -->
+    <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="Logo">
+      <h3>SalgadosDulce</h3>
     </div>
-    <button class="btn_buscar" type="submit">Buscar</button>
-  </form>
 
-  <!-- 👇 Seção de login/perfil -->
- 
-
-    
-        </div>
-
-        <!--Links principais Navegação + botão de entrar-->
-        <nav>
-            <ul class="list-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li><a href="#Cardapio">Cardápio</a></li>
-                <li><a href="#contatos">Contatos</a></li>
-                <li><a href="#"><i class="bi bi-cart"></i></a></li>
-            
-                  <div class="usuario-logado">
-    <i class="bi bi-person-circle user-pic" onclick="toggleMenu()"></i>
-    <span id="nome-usuario"></span>
-    <div class="sub-menu-wrap" id="subMenu">
-      <div class="sub-menu">
-        <div class="user-info">
-          <img src="https://www.pngplay.com/wp-content/uploads/12/Emoji-Meme-Free-PNG.png" alt="User">
-          <h3>Usuário</h3>
-        </div>
-
-        <hr>
-
-        <a href="#" class="sub-menu-link">
-          <img src="https://img.icons8.com/?size=100&id=rrtYnzKMTlUr&format=png&color=FFFFFF" alt="Perfil">
-          <p>Seu perfil</p>
-          <span>&rsaquo;</span>
-        </a>
-
-        <a href="#" class="sub-menu-link">
-          <img src="https://img.icons8.com/?size=100&id=97554&format=png&color=000000" alt="Sair">
-          <p>Meus Pedidos</p>
-          <span>&rsaquo;</span>
-        </a>
-
-        <a href="#" class="sub-menu-link">
-          <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=FFFFFF" alt="Configurações">
-          <p>Configurações</p>
-          <span>&rsaquo;</span>
-        </a>
-
-        <a href="#" class="sub-menu-link">
-          <img src="https://img.icons8.com/?size=100&id=2908&format=png&color=FFFFFF" alt="Ajuda">
-          <p>Ajuda e Privacidade</p>
-          <span>&rsaquo;</span>
-        </a>
-
-        <a href="#" class="sub-menu-link">
-          <img src="https://img.icons8.com/?size=100&id=2h04cb0QhVJ4&format=png&color=FFFFFF" alt="Sair">
-          <p>Sair</p>
-          <span>&rsaquo;</span>
-        </a>
+    <!-- Busca -->
+    <form class="form-busca">
+      <div class="buscar">
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="Ex: HMMMMM bolo de morango" />
       </div>
-    </div>
-  </div>
+      <button class="btn_buscar" type="submit">Buscar</button>
+    </form>
 
+    <!-- Menu de navegação -->
+    <nav class="menu-container" id="menu">
+      <ul class="list-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#sobre-nos">Sobre nós</a></li>
+        <li><a href="#Cardapio">Cardápio</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+        <li><a href="#"><i class="bi bi-cart"></i></a></li>
 
-        </nav>
-
-
-      
-    </header>
+        <!-- Perfil -->
+        <div class="usuario-logado">
+          <i class="bi bi-person-circle user-pic" onclick="toggleMenu()"></i>
+          <span id="nome-usuario"></span>
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="https://www.pngplay.com/wp-content/uploads/12/Emoji-Meme-Free-PNG.png" alt="User">
+                <h3>Usuário</h3>
+              </div>
+              <hr>
+              <a href="#" class="sub-menu-link">
+                <img src="https://img.icons8.com/?size=100&id=rrtYnzKMTlUr&format=png&color=FFFFFF" />
+                <p>Meu perfil</p>
+                <span>&rsaquo;</span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="https://img.icons8.com/?size=100&id=97554&format=png&color=000000" />
+                <p>Meus Pedidos</p>
+                <span>&rsaquo;</span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=FFFFFF" />
+                <p>Configurações</p>
+                <span>&rsaquo;</span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="https://img.icons8.com/?size=100&id=2908&format=png&color=FFFFFF" />
+                <p>Ajuda e Privacidade</p>
+                <span>&rsaquo;</span>
+              </a>
+              <a href="página_principal.html" class="sub-menu-link">
+                <img src="https://img.icons8.com/?size=100&id=2h04cb0QhVJ4&format=png&color=FFFFFF" />
+                <p>Sair</p>
+                <span>&rsaquo;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>
 
     <!-- SEÇÃO PRINCIPAL Frase no meio da página -->
     <section class="first-section">
@@ -349,24 +354,23 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
       </section>
 
 <!-- ====== CONTATOS ====== -->
-
-           <section class="footer-contato">
-            <h2>CONTATE-NOS:</h2>
-            <div class="contato-info">
-              <div class="contato-item">
-                <i class="bi bi-whatsapp"></i>
-                <p>(81) 99999-9999</p>
-              </div>
-              <div class="contato-item">
-                <i class="bi bi-instagram"></i>
-                <p>@Naotemanada</p>
-              </div>
-              <div class="contato-item">
-                <i class="bi bi-geo-alt"></i>
-                <p>Av. Ali Embaixo, nº 123<br>Recife - PE, Brasil</p>
-              </div>
-            </div>
-          </section>
+<footer class="contato">
+  <h2>CONTATE-NOS:</h2>
+  <div class="contato-container">
+    <div class="contato-item">
+      <i class="bi bi-whatsapp"></i>
+      <p>(81) 99999-9999</p>
+    </div>
+    <div class="contato-item">
+      <i class="bi bi-instagram"></i>
+      <p>@Naotemanada</p>
+    </div>
+    <div class="contato-item">
+      <i class="bi bi-geo-alt"></i>
+      <p>Av. Ali Embaixo, nº 123 <br> Recife - PE, Brasil</p>
+    </div>
+  </div>
+</footer>
           
 
    <!-- ====== RODAPÉ ====== -->

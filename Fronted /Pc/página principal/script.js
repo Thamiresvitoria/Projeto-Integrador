@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   // MENU TOGGLE
   const toggle = document.getElementById("menu-toggle");
@@ -99,4 +98,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Se estiver na página principal protegida, verifica login
     if (window.location.pathname.includes("poslogin_principal.html")) {
       verificarLogin();
+    }
+
+  const toggleButton = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggleButton.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    function toggleMenu() {
+      const submenu = document.getElementById("subMenu");
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
     }
