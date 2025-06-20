@@ -10,9 +10,9 @@ O nossi grupo escolheu fazer um site onde serão vendidos doces e salgados, uma 
 
 Tecnologias usadas para criar a interface e experiência do usuário:
 
-![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white&labelColor=E34F26)
-![JavaScript](https://img.shields.io/badge/JavaScript-Orange-F7DF1E?logo=javascript&logoColor=black)
+![CSS](https://img.shields.io/badge/CSS-Blue-1572B6?logo=css3&logoColor=white&labelColor=1572B6)
+![HTML](https://img.shields.io/badge/HTML-Orange-E34F26?logo=html5&logoColor=white&labelColor=E34F26)
+![JavaScript](https://img.shields.io/badge/JavaScript-Orange-F7DF1E?logo=javascript&logoColor=black&labelColor=F7DF1E)
 
 ---
 
