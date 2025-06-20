@@ -12,29 +12,40 @@
 <body
     
    <!-- Cabeçalho da página, logo + barra de pesquisa-->
-      <header class="content">
-         <!-- Logo da marca -->
-  <div class="logo">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="">  
-    <h3>SalgadosDulce</h3>
-  </div>
-  <!-- Formulário de busca -->
-  <form class="form-busca">
-    <div class="buscar">
-      <!-- Ícone da lupa dentro do input -->
-      <i class="bi bi-search"></i>
-      <input type="search" placeholder="Ex: HMMMMM bolo de morango" />
+
+  <header class="content">
+    <!-- Botão hambúrguer (só aparece no mobile) -->
+    <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="Logo">
+      <h3>SalgadosDulce</h3>
     </div>
-    <button class="btn_buscar" type="submit">Buscar</button>
-  </form>
+
+    <!-- Busca -->
+<!-- Ícone de pesquisa para mobile -->
+<button class="search-toggle"><i class="bi bi-search"></i></button>
+
+<!-- Barra de pesquisa escondida por padrão -->
+<form class="form-busca mobile-search" id="mobile-search">
+  <div class="buscar">
+    <i class="bi bi-search"></i>
+    <input
+      type="search"
+      placeholder="Ex: HMMMMM bolo de morango"
+    />
+  </div>
+  <button class="btn_buscar" type="submit">Buscar</button>
+</form>
 
         <!--Links principais Navegação + botão de entrar-->
-        <nav>
+        <nav class="menu-container" id="menu"
             <ul class="list-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
                 <li><a href="#Cardapio">Cardápio</a></li>
-                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#contatos">contatos</a></li>
                 <li><a href="#"><i class="bi bi-cart"></i></a></li>
                  <!-- Botão Entrar; troque depois via JS quando estiver logado -->
                 <button class="entrar" onclick="window.location.href='../login/login.html'">Entrar</button>
@@ -46,7 +57,7 @@
     </header>
 
     <!-- SEÇÃO PRINCIPAL Frase no meio da página -->
-    <section class="first-section">
+    <section class="first-section" id="Home">
           <div class="conteudo-principal">
              <!-- Título e subtítulo de boas-vindas -->
             <h1>A vida é salgada, mas aqui é uma delícia!</h1>
@@ -61,8 +72,7 @@
         <div class=main>
         <div class="titulo">
             <h1> Sobre nós</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+            <p>Fundada com muito carinho e dedicação, a SalgadosDulce é uma loja de salgados e doces artesanais que nasceu com o propósito de levar sabor e aconchego para os momentos inesquecíveis de nossos clientes. Localizada no coração do bairro, somos um negócio familiar que preza pela qualidade dos ingredientes, pelo atendimento próximo e pelo sabor caseiro que conquista desde a primeira mordida. De coxinhas crocantes a brigadeiros irresistíveis, cada produto é feito com amor para tornar seus momentos ainda mais especiais. </p>
         </div>
         <div class="image">
             <img src="https://conteudo.imguol.com.br/c/entretenimento/2013/10/21/pato-donald-1382389513248_615x470.jpg" alt=""> 
@@ -78,13 +88,13 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
      
          <div class="menu">
         <button>Todos</button>
-        <button>Salgados </button>
         <button>Doces</button>
-        <button>Kit festas</button>
         <button>Bebidas</button>
+        <button>Salgados</button>
+        <button>Kit festas</button>
         </div>
 
-        <div class="Todos">
+        <div class="Todos" >
           <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Coxinha</h3>
@@ -330,7 +340,7 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
       </section>
 
     <!-- ====== CONTATOS ====== -->
-           <footer class="contato">
+           <footer class="contato" id="contatos">
   <h2>CONTATE-NOS:</h2>
   <div class="contato-container">
     <div class="contato-item">
