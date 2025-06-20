@@ -1,3 +1,4 @@
+
 /* Importa a fonte Alegreya do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900&display=swap');
 
@@ -67,6 +68,10 @@ header.content {
   border-radius: 5px;
 }
 
+.search-toggle {
+  display: none;
+}
+
 .form-busca {
 display: flex;
 align-items: center;
@@ -120,14 +125,16 @@ cursor: pointer;
   color: #f8f8f8;
 }
 
+
+/*toggle*/ 
+
 .menu-toggle {
-display: none;
-font-size: 3rem;
-background: none;
-border: none;
-cursor: pointer;
-color: #ffffff;
-margin-right: 10px;
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
 }
 
 .menu-toggle .open-menu {
@@ -706,7 +713,9 @@ margin-left: 4rem;
 margin-right: 4rem;
 }
 
-.list-menu .open-menu{
+/* Menu toggle */
+
+  .menu-container .list-menu {
   display: flex;
   align-items: center;
   padding-right: 30px;
@@ -734,7 +743,6 @@ margin-right: 4rem;
   border-bottom: 1px solid #ffc506;
   color: #ffc506;
 }
-
 /* card */
 
 .card p {
