@@ -3,143 +3,628 @@
 
 /* Reset de estilos globais e configurações padrão */
 * {
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Alegreya', serif;
 }
 
+/* Configurações básicas do HTML */
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 60.5%; /* Facilita o uso de rem para responsividade */
+    overflow-x: hidden;
+}
+
+/* Tamanho base da fonte do corpo */
 body {
-  background: #f5f5f5;
+    font-size: 1.6rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+
 }
 
-.container {
+header.content {
   display: flex;
-  max-width: 1200px;
-  margin: 30px auto;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(34, 34, 41);
+  position: relative;
 }
 
-.sidebar {
-  width: 250px;
-  background: #fff;
-  border-right: 1px solid #ddd;
-  padding: 20px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.sidebar h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+.logo img {
+  height: 40px;
+  border-radius: 50%;
 }
 
-.sidebar ul {
+.logo h3 {
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 5px;
+}
+
+.form-busca {
+display: flex;
+align-items: center;
+flex: 1;
+margin: 10px;
+}
+
+.buscar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 0.5;
+}
+
+.buscar i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bebcbc;
+  pointer-events: none;
+}
+
+.buscar input {
+border: none;
+outline: none;
+width: 100%;
+padding-left: 35px;
+height: 35px;
+border-radius: 15px;
+}
+
+.buscar input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.btn_buscar {
+margin-left: 10px;
+padding: 5px 15px;
+height: 35px;
+border: none;
+background-color: #e9a11c;
+color: rgb(255, 255, 255);
+border-radius: 7px;
+cursor: pointer;
+}
+
+.btn_buscar:hover {
+  background-color: rgb(218, 174, 32);
+  border-bottom: 1px solid #ffffff;
+  color: #f8f8f8;
+}
+
+.menu-toggle {
+display: none;
+font-size: 3rem;
+background: none;
+border: none;
+cursor: pointer;
+color: #ffffff;
+margin-right: 10px;
+}
+
+
+.bnt_pesquisa {
+  display: none;
+}
+
+.menu-container {
+display: flex;
+}
+
+.list-menu {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  gap: 2rem;
+  transition: all 200ms ease-in;
+}
+
+.list-menu li {
   list-style: none;
 }
 
-.sidebar li {
-  padding: 12px;
+.list-menu li a {
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s;
+}
+
+.list-menu li a:hover {
+  color: #ffc506;
+  border-bottom: 3px solid #ffc506;
+}
+
+/*-BOTÃO DE ENTRAR-*/
+.list-menu button {
+margin-left: 10px;
+padding: 5px 15px;
+height: 35px;
+border: none;
+background-color: #e9a11c;
+color: rgb(255, 255, 255);
+border-radius: 7px;
+cursor: pointer;
+}
+
+.list-menu button:hover {
+  background-color: rgb(218, 174, 32);
+  border-bottom: 1px solid #ffffff;
+  color: #f8f8f8;
+}
+
+.usuario-logado {
   display: flex;
   align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  border-radius: 5px;
+  gap: 1.5rem;
+  padding-right: 10px;
 }
 
-.sidebar li.active,
-.sidebar li:hover {
-  background: #f45c02;
+.usuario-logado i {
   color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 25px;
 }
 
-.content {
-  flex: 1;
-  padding: 30px;
+.usuario-logado i:hover {
+  color: #ffc506;
 }
 
-.content h2 {
-  margin-bottom: 20px;
+.user-pic {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ .sub-menu-wrap {
+      position: absolute;
+      top: 100%;
+      right: 2%;
+      margin-left: 100px;
+      width: 320px;
+      background-color: rgb(34, 34, 41);
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .sub-menu-wrap.open-menu {
+      max-height: 500px;
+    }
+
+    .sub-menu {
+      padding: 20px;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .user-info img {
+      width: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .user-info h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .sub-menu hr {
+      border: none;
+      height: 1px;
+      background: #ffffff;
+      margin: 15px 0;
+    }
+
+    .sub-menu-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #ffffff;
+      margin: 12px 0;
+      transition: background 0.2s;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .sub-menu-link:hover {
+      background: rgb(223, 152, 71);
+    }
+
+    .sub-menu-link img {
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .sub-menu-link p {
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .sub-menu-link span {
+      font-size: 30px;
+      color: #888;
+    }
+/* ================= Primeira seção ================= */
+
+.first-section {
+    height: 70vh;
+    background-color: rgb(37, 23, 23);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Título principal */
+.first-section h1 {
+    color: rgb(206, 135, 55);
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo */
+.first-section h2 {
+    color: bisque;
+    font-size: 3rem;
+    font-weight: 450;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+/* ================= Seção "Sobre Nós" ================= */
+
+.sobre-nos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    background-color: rgba(31, 20, 20, 1.2);
+}
+
+/* Container principal */
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Texto da seção */
+.titulo {
+    color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Título "Sobre Nós" */
+.titulo h1 {
+    margin-left: 6rem;
+    font-size: 5rem;
+    padding-bottom: 1.6rem;
+}
+
+/* Descrição da seção */
+.titulo p {
+    font-size: 2rem;
+    padding-left: 1rem;
+    max-width: 800px;
+    margin-left: 50px;
+}
+
+/* Container da imagem */
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Imagem da seção */
+.image img {
+    width: 600px;
+    height: 400px;
+}
+
+/* ================= Cardápio ================= */
+
+.Cardapio {
+  padding: 45px;
+  background-color: rgb(37, 23, 23);
+  color: bisque;
+  text-align: center;
+}
+
+.Cardapio h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.menu button {
+  font-size: 20px;
+  padding: 10px 50px;
+  border: none;
+  background-color: rgb(218, 174, 32);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+  background-color: #ff7300;
+}
+
+.Todos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #2e1b1b;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.card p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #f45c02;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: rgb(218, 174, 32);
+}
+
+
+/* ================= Contatos ================= */
+
+.contato {
+  background-color: #221212;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.contato h2 {
+  margin-bottom: 30px;
   font-size: 24px;
 }
 
-form {
+.contato-container {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-row {
-  display: flex;
-  gap: 20px;
-}
-
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.link {
-  color: #f45c02;
-  font-size: 12px;
-  margin-top: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.checkbox {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.buttons {
+.contato-item {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.btn {
-  background: #f45c02;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.btn:hover {
-  background: #d94e00;
+.contato-item:hover {
+  transform: scale(1.1);
 }
 
-.btn-outline {
-  background: transparent;
-  color: #f45c02;
-  border: 1px solid #f45c02;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
+.contato-item i {
+  font-size: 30px;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-.btn-outline:hover {
-  background: #ffece3;
+.contato-item:hover i {
+  color: #e28a67; /* Cor quando passa o mouse */
+}
+
+.contato-item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+/* ================= Rodapé ================= */
+
+footer {
+    background-color: rgb(37, 23, 23);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsividade */
+
+/* RESPONSIVIDADE */
+
+/* Telas até 1024px (notebooks e tablets em landscape) */
+@media (max-width: 1024px) {
+  .buscar input {
+    width: 350px;
+  }
+
+  .list-menu button {
+    padding: 0.8rem 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Telas até 768px (tablets e celulares grandes) */
+@media (max-width: 768px) {
+  .form-busca {
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 0;
+  }
+
+  .buscar {
+    display: flex;
+    margin-left: 7rem;
+  }
+
+  .buscar input {
+    width: 80%;
+  }
+
+  .btn_buscar {
+    width: 20%;
+    display:none;
+  }
+
+  .content .list-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 0;
+  }
+
+  .list-menu button {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .logo img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 20rem;
+    margin-bottom: 0.5rem;
+  }
+  .logo h3 {
+    display: none;
+  }
+  
+  /* Esconde a barra de pesquisa por padrão no mobile */
+  .mobile-search {
+    display: none;
+  }
+
+  /* Exibe quando estiver ativada */
+  .mobile-search.active {
+    display: flex;
+    flex-direction: column; /* se quiser empilhar input e botão */
+  }
+
+  /* Exibe o botão de lupa no mobile */
+  .search-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2.3rem;
+    color: #fff; /* ajuste para a cor do seu site */
+    cursor: pointer;
+    margin-right: 3rem;
+  }
+}
+
+/* Telas até 480px (celulares pequenos) */
+@media (max-width: 768px) {
+  .form-busca {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-container {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-container.active {
+    display: block;
+  }
+
+  .list-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f0f0f0;
+    padding: 10px;
+  }
+
+  .list-menu li {
+    margin: 5px 0;
+  }
 }

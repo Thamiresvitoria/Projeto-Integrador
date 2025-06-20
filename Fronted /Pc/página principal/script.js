@@ -107,7 +107,16 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.classList.toggle("active");
     });
 
-    function toggleMenu() {
-      const submenu = document.getElementById("subMenu");
-      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-    }
+      function toggleMenu() {
+        document.getElementById("subMenu").classList.toggle("open-menu");
+      }
+  
+    
+    // barra de pesquisa 
+    
+  const searchToggle = document.querySelector('.search-toggle');
+  const mobileSearch = document.querySelector('#mobile-search');
+
+  searchToggle.addEventListener('click', () => {
+    mobileSearch.classList.toggle('active');
+  });

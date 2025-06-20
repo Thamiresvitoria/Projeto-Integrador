@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Importa o CSS principal -->
-    <link rel="stylesheet" href="principal.css"> 
+    <link rel="stylesheet" href="./principal.css"> 
      <!-- Ícones do Bootstrap (lupa, carrinho etc.) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Salgados Dulce</title>
 </head>
 <body
     
-    <!-- Cabeçalho da página, logo + barra de pesquisa-->
+   <!-- Cabeçalho da página, logo + barra de pesquisa-->
       <header class="content">
          <!-- Logo da marca -->
   <div class="logo">
@@ -28,24 +28,17 @@
     <button class="btn_buscar" type="submit">Buscar</button>
   </form>
 
-  <!-- 👇 Seção de login/perfil -->
- 
-
-    
-        </div>
-
         <!--Links principais Navegação + botão de entrar-->
         <nav>
-          <ul class="list-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#sobre-nos">Sobre nós</a></li>
-              <li><a href="#Cardapio">Cardápio</a></li>
-              <li><a href="#contatos">Contatos</a></li>
-              <li><a href="#"><i class="bi bi-cart"></i></a></li>
-              <button class="entrar" onclick="window.location.href='../login/login.html'"> Entrar </button>
-          </ul>
-      </nav>
-
+            <ul class="list-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre-nos">Sobre nós</a></li>
+                <li><a href="#Cardapio">Cardápio</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                 <!-- Botão Entrar; troque depois via JS quando estiver logado -->
+                <button class="entrar" onclick="window.location.href='../login/login.html'">Entrar</button>
+            </ul>
         </nav>
 
 
@@ -72,7 +65,7 @@
 quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
         </div>
         <div class="image">
-            <img src="https://cdn.discordapp.com/attachments/1375646595764195410/1382947593423814818/1749790781827.png?ex=684d01d0&is=684bb050&hm=c8741879e21805f2ac230d2b06dd1c7a137a0ab04b953180c97295f2079f0710&" alt=""> 
+            <img src="https://conteudo.imguol.com.br/c/entretenimento/2013/10/21/pato-donald-1382389513248_615x470.jpg" alt=""> 
         </div>
         </div>
     </section>
@@ -85,9 +78,10 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
      
          <div class="menu">
         <button>Todos</button>
-        <button>Salgados Fritos</button>
-        <button>Salgados Assados</button>
+        <button>Salgados </button>
         <button>Doces</button>
+        <button>Kit festas</button>
+        <button>Bebidas</button>
         </div>
 
         <div class="Todos">
@@ -102,188 +96,257 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Risole</h3>
             <p>R$ 4,00 por u</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Risole', preco: 4.00 })">Comprar</button>
           </div>
               
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Bolinho de bacalhau</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Bolinho de bacalhau', preco: 4.00 })">Comprar</button>
           </div>
                     
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Bolinho de Charque</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Bolinho de charque', preco: 4.00 })">Comprar</button>
           </div>   
           
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
-            <h3>Pastal de carne</h3>
+            <h3>Pastel de carne</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Pastel de carne', preco: 4.00 })">Comprar</button>
           </div>
                
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Enroladinho</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Enroladinho', preco: 4.00 })">Comprar</button>
           </div>
           
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Croquete</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Croquete', preco: 4.00 })">Comprar</button>
           </div>
       
           <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Empada</h3>
             <p>R$ 3,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Empada', preco: 3.00 })">Comprar</button>
           </div>
                   
           <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Pastel de forno</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Pastel de forno', preco: 4.00 })">Comprar</button>
           </div>
               
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Salgadinho de Queijo</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Salgadinho de queijo', preco: 4.00 })">Comprar</button>
           </div>
                   
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Salgadinho de Cebola</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Salgadinho de cebola', preco: 4.00 })">Comprar</button>
           </div>
                   
             <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
             <h3>Troxinha</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Troxinha', preco: 4.00 })">Comprar</button>
           </div>
                   
             <div class="card">
              <img src="./assets/coxinha.jfif" alt="Produto">
              <h3>Brioche</h3>
              <p>R$ 4,00</p>
-             <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+             <button onclick="adicionarAoCarrinho({ nome: 'Brioche', preco: 4.00 })">Comprar</button>
           </div>
                   
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ThIR-2n2oaswXgv_e8FI7KmN7tEJe8lZuurbq1GWBdkwczEPBktlCusM&s=10">
             <h3>Brigadeiro</h3>
             <p>R$ 3,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Brigadeiro', preco: 3.00 })">Comprar</button>
           </div>
               
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfP05whbZvueR6oqg8kK2UKZwn2kJ7rFMMnbBcQojHNbN5wS0Y6RFivGrf&s=10" alt="Produto">
             <h3>Brigadeiro de Ninho</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Brigadeiro de ninho', preco: 4.00 })">Comprar</button>
           </div>
               
             <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuXvN3iPjPzwlqlMruQZwZNWYVXlV-ifmlKd3COv75N6UwOWR8M5VQ4pY&s=10" alt="Produto">
             <h3>Brigadeiro de Oreo</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Brigadeiro de oreo', preco: 4.00 })">Comprar</button>
           </div>
               
            <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWR9-lKsoC1YQNBflW_BcNFARADM-C69zIImhIP4zVNWD37FolimaUoZI&s=10" alt="Produto">
-            <h3>Supresa de Uva</h3>
+            <h3>Surpresa de Uva</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Surpresa de uva', preco: 4.00 })">Comprar</button>
           </div>
               
            <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMc0QctqAbePKnPenyKV0QWCyy-r26G2KE2zZw5COmFTdDIbcDcqahMZb-&s=10" alt="Produto">
             <h3>Beijinho</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Beijinho', preco: 4.00 })">Comprar</button>
           </div>
               
            <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmRn-eHmU_HGW6vuObwacRXMT4PA_Y8t8mLsuEtMfx84JepAnhDYjN8eP&s=10" alt="Produto">
             <h3>Pastel de Nata</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Pastel de nata', preco: 4.00 })">Comprar</button>
           </div>
               
            <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSujJgm3BWqnzG24eQ90-Pjh2wDffTvaQGvSBL_Vg2jfIvl0lPQWPybjl4&s=10" alt="Produto">
             <h3>Olho de Sogra</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Olho de sogra', preco: 4.00 })">Comprar</button>
           </div>
               
            <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_cYg7DtujZSTCoAgq1shbRRfgCOhTEZJb_WL2aCEpDOJ_5BP4eBbgQUPY&s=10" alt="Produto">
             <h3>Tortinha de Limão</h3>
             <p>R$ 4,00</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Tortinha de limão', preco: 4.00 })">Comprar</button>
           </div>
               
            <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDmOzs7bjlw7_FL7FFHV58Ap3hYNlGxlRgH1fVRu4rEC4ezlZzpeIGcw9l&s=10" alt="Produto">
             <h3>Lolita</h3>
             <p>R$ 0.90</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Lolita', preco: 0.90 })">Comprar</button>
           </div>
               
            <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvCzyX2wDVzdwjHidPQUNVt8lMLV2oD3XvXx6ogOIPyNKFOeIf0i-nrX0&s=10" alt="Produto">
             <h3>Docinho de Amendoin</h3>
             <p>R$ 0.90</p>
-            <button onclick="adicionarAoCarrinho({ nome: 'Coxinha', preco: 2.00 })">Comprar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Docinho de amendoin', preco: 0.90 })">Comprar</button>
           </div>
               
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Bem-casado</h3>
             <p>R$ 0.90</p>
-            <button onclick="adicionarAocarrinho('Bem-casado',0.09)">Adicionar</button>
+            <button onclick="adicionarAoCarrinho({ nome: 'Bem-casado', preco: 0.90 })">Comprar</button>
           </div>
-                  
-              </div>
+            
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Coca-Cola</h3>
+            <p>R$ 9.50</p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Coca-Cola', preco: 9.50 })">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Sprite</h3>
+            <p>R$ 9.50</p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Sprite', preco: 9.50 })">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Fanta Laranja</h3>
+            <p>R$ 9.50</p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Fanta Laranja', preco: 9.50 })">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Guaraná Antarctica</h3>
+            <p>R$ 9.50</p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Guaraná Antarctica', preco: 9.50 })">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Pepsi</h3>
+            <p>R$ 9.50</p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Pepsi', preco: 9.50 })">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Kuat</h3>
+            <p>R$ 9.50</p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Suco Laranja Natural (500ml)</h3>
+            <p>R$ 10.00 </p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Suco de uva (500ml)</h3>
+            <p>R$ 10.00 </p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Água sem gás (500ml)</h3>
+            <p>R$ 3.00 </p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
+            <h3>Suco Laranja Natural (500ml)</h3>
+            <p>R$ 10.00 </p>
+            <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
+          </div>
+
+          
+
           </div>
           
       </section>
 
     <!-- ====== CONTATOS ====== -->
-
-           <section class="footer-contato">
-            <h2>CONTATE-NOS:</h2>
-            <div class="contato-info">
-              <div class="contato-item">
-                <i class="bi bi-whatsapp"></i>
-                <p>(81) 99999-9999</p>
-              </div>
-              <div class="contato-item">
-                <i class="bi bi-instagram"></i>
-                <p>@Naotemanada</p>
-              </div>
-              <div class="contato-item">
-                <i class="bi bi-geo-alt"></i>
-                <p>Av. Ali Embaixo, nº 123<br>Recife - PE, Brasil</p>
-              </div>
-            </div>
-          </section>
-          
+           <footer class="contato">
+  <h2>CONTATE-NOS:</h2>
+  <div class="contato-container">
+    <div class="contato-item">
+      <i class="bi bi-whatsapp"></i>
+      <p>(81) 99999-9999</p>
+    </div>
+    <div class="contato-item">
+      <i class="bi bi-instagram"></i>
+      <p>@Naotemanada</p>
+    </div>
+    <div class="contato-item">
+      <i class="bi bi-geo-alt"></i>
+      <p>Av. Ali Embaixo, nº 123 <br> Recife - PE, Brasil</p>
+    </div>
+  </div>
+</footer>
 
    <!-- ====== RODAPÉ ====== -->
  <footer>
@@ -291,6 +354,5 @@ quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
    <p>&copy; 2025 Dulce Salgados - Todos os direitos reservados.</p>
   </footer>
 <script src="script.js"></script>
-
 </body>
 </html>

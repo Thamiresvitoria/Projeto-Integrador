@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <aside class="sidebar">
+    <h2>Minha conta</h2>
+    <ul>
+      <li class="active">Meu Perfil</li>
+      <li>Meus pedidos</li>
+      <li>Configurações</li>
+      <li>Ajuda e privacidade</li>
+      <li>Meus endereços</li>
+      <li>Sair</li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <h2>Meu cadastro - Conta Pessoal</h2>
+    <form>
+      <div class="form-group">
+        <label>Nome completo</label>
+        <input type="text">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Data de nascimento</label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>CPF</label>
+          <input type="text" placeholder="000.000.000-00">
+        </div>
+
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" placeholder="email@exemplo.com">
+          <a href="#" class="link">Alterar e-mail</a>
+        </div>
+        <div class="form-group">
+          <label>Telefone</label>
+          <input type="text" placeholder="(00) 00000-0000">
+        </div>
+        <div class="form-group">
+          <label>Como ficou sabendo?</label>
+          <select>
+            <option>Selecione</option>
+            <option>Google</option>
+            <option>Indicação</option>
+            <option>Redes sociais</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn-outline">Excluir minha conta</button>
+        <button class="btn">Salvar</button>
+      </div>
+    </form>
+  </main>
+</div>
+
+</body>
+</html>
