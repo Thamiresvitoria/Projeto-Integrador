@@ -1,140 +1,248 @@
+/* 🔄 Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #f5f5f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: rgb(37, 23, 23);
+  color: #333;
 }
 
+/* 🔲 Container */
 .container {
   display: flex;
-  max-width: 1200px;
-  margin: 30px auto;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-height: 100vh;
 }
 
+/* 🔵 Sidebar */
 .sidebar {
   width: 250px;
-  background: #fff;
-  border-right: 1px solid #ddd;
-  padding: 20px;
+  background-color: black;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .sidebar ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .sidebar li {
-  padding: 12px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
-  cursor: pointer;
-  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .sidebar li.active,
 .sidebar li:hover {
-  background: #f45c02;
+  background-color: rgb(70, 62, 62);
+  border-bottom: 1px solid #ffc506;
   color: white;
+  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
+/* 🔳 Conteúdo */
 .content {
   flex: 1;
-  padding: 30px;
+  padding: 40px;
 }
 
 .content h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color:white;
 }
 
+/* 📑 Formulário */
 form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  margin-bottom: 20px;
 }
 
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid rgb(34, 34, 41);
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color:#ffc506;
+  outline: none;
+}
+
+.form-group .link {
+  margin-top: 5px;
+  color:black;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Linha do formulário */
 .form-row {
   display: flex;
   gap: 20px;
 }
 
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.link {
-  color: #f45c02;
-  font-size: 12px;
-  margin-top: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
+/* 🎯 Botões */
 .buttons {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .btn {
-  background: #f45c02;
-  color: white;
-  padding: 8px 16px;
+  font-size: 20px;
+  padding: 10px 50px;
   border: none;
-  border-radius: 5px;
+  background-color: rgb(223, 152, 71);
+  color: white;
   cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background: #d94e00;
+  background-color: rgb(70, 62, 62);
+  border-bottom: 1px solid #ffc506;
+  color: #ffc506;
+  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
-  background: transparent;
-  color: #f45c02;
-  border: 1px solid #f45c02;
-  padding: 8px 16px;
-  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid #ffc506;
+  padding: 12px 24px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 .btn-outline:hover {
-  background: #ffece3;
+  background-color: rgb(70, 62, 62);
+  border-bottom: 1px solid #ffc506;
+  color: white;
+  transform: scale(1.05);
+  transform: translateY(-2px);
+}
+
+/* 🔥 Botão do menu toggle */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+ background-color: rgb(37, 23, 23);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 🔥 Sidebar responsiva */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .menu-toggle.active {
+  background-color: rgb(70, 62, 62);
+}
+
+  .container {
+    margin-top:3rem;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: black;
+    padding: 50px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+    
+  }
+  
+  
+    .sidebar h2 {
+      margin-top:3rem;
+    }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Fundo escurecido */
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
 }

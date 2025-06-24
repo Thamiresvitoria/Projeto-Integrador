@@ -24,12 +24,27 @@ html {
 
 /* cor, tamanho e scrollbar não esta pegando?*/
 
-html::-webkit-scrollbar { 
-  width: 13rem; }
+/* Scrollbar inteira */
+::-webkit-scrollbar {
+  width: 8px; /* Largura vertical */
+  height: 8px; /* Altura horizontal */
+}
 
-html::-webkit-scrollbar-track { background: #000000; }
+/* Fundo da scrollbar */
+::-webkit-scrollbar-track {
+  background: rgb(34, 34, 41);
+}
 
-html::-webkit-scrollbar-thumb { background: rgb(136, 3, 3); }
+/* Parte que se move (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #e9a11c;
+  border-radius: 10px;
+}
+
+/* Hover no thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(206, 135, 55);
+}
 
 /* Tamanho base da fonte do corpo */
 body {

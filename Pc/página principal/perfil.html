@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Conta</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="perfil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+<!-- 🔥 Botão do menu toggle -->
+<button class="menu-toggle" id="menu-toggle">
+  <i class="fas fa-bars"></i>
+</button>
 
 <div class="container">
   <aside class="sidebar">
     <h2>Minha conta</h2>
     <ul>
-      <li class="active">Meu Perfil</li>
-      <li>Meus pedidos</li>
-      <li>Configurações</li>
-      <li>Ajuda e privacidade</li>
-      <li>Meus endereços</li>
-      <li>Sair</li>
+      <li class="active"><i class="fas fa-user"></i> Meu Perfil</li>
+      <li><i class="fas fa-box"></i> Meus pedidos</li>
+      <li><i class="fas fa-cog"></i> Configurações</li>
+      <li><i class="fas fa-question-circle"></i> Ajuda e privacidade</li>
+      <li><i class="fas fa-home"></i> Meus endereços</li>
+      <li><i class="fas fa-sign-out-alt"></i> Sair</li>
     </ul>
   </aside>
 
@@ -38,7 +44,6 @@
           <label>CPF</label>
           <input type="text" placeholder="000.000.000-00">
         </div>
-
       </div>
 
       <div class="form-row">
@@ -63,12 +68,13 @@
       </div>
 
       <div class="buttons">
-        <button class="btn-outline">Excluir minha conta</button>
-        <button class="btn">Salvar</button>
+        <button type="button" class="btn-outline">Excluir minha conta</button>
+        <button type="submit" class="btn">Salvar</button>
       </div>
     </form>
   </main>
 </div>
 
+<script src="perfil.js"></script>
 </body>
 </html>

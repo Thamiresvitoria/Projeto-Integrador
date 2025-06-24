@@ -4,42 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Importa o CSS principal -->
-    <link rel="stylesheet" href="./principal.css"> 
+    <link rel="stylesheet" href="principal.css"> 
      <!-- Ícones do Bootstrap (lupa, carrinho etc.) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Salgados Dulce</title>
 </head>
-<body
+<body>
     
-   <!-- Cabeçalho da página, logo + barra de pesquisa-->
-
-  <header class="content">
+   <header class="content">
     <!-- Botão hambúrguer (só aparece no mobile) -->
- <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list" id="toggle-icon"></i></button>
-
+    <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list" id="toggle-icon"></i></button>
     <!-- Logo -->
     <div class="logo">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2tcJst1RWd-hDrGzAz6JBsJNXIy1P2P8jkQ&s" alt="Logo">
       <h3>SalgadosDulce</h3>
     </div>
-
+    
     <!-- Busca -->
-<!-- Ícone de pesquisa para mobile -->
-<button class="search-toggle"><i class="bi bi-search"></i></button>
-
-<!-- Barra de pesquisa escondida por padrão -->
-<form class="form-busca mobile-search" id="mobile-search">
-  <div class="buscar">
-    <i class="bi bi-search"></i>
-    <input
+    <!-- Ícone de pesquisa para mobile -->
+    <button class="search-toggle"><i class="bi bi-search"></i></button>
+    
+    <!-- Barra de pesquisa escondida por padrão -->
+    <form class="form-busca mobile-search" id="mobile-search">
+     <div class="buscar">
+      <i class="bi bi-search"></i>
+      <input
       type="search"
-      placeholder="Ex: HMMMMM bolo de morango"
-    />
-  </div>
-  <button class="btn_buscar" type="submit">Buscar</button>
-</form>
-
-        <!--Links principais Navegação + botão de entrar-->
+      placeholder="Ex: HMMMMM bolo de morango" />
+     </div>
+      <button class="btn_buscar" type="submit">Buscar</button>
+    </form>
+      
+      <!--Links principais Navegação + botão de entrar-->
         <nav class="menu-container" id="menu"
             <ul class="list-menu">
                 <li><a href="#">Home</a></li>
@@ -55,33 +51,29 @@
 
       
     </header>
-
-    <!-- SEÇÃO PRINCIPAL Frase no meio da página -->
-    <section class="first-section" id="Home">
+       <!-- SEÇÃO PRINCIPAL Frase no meio da página -->
+        <section class="first-section" id="Home">
           <div class="conteudo-principal">
              <!-- Título e subtítulo de boas-vindas -->
             <h1>A vida é salgada, mas aqui é uma delícia!</h1>
             <h2>Sabor que abraça!</h2>
           </div>
-        
-    </section>   
-
+        </section>   
       <!-- ====== SOBRE NÓS ====== -->
-    
-    <section class="sobre-nos" id="sobre-nos">
+      
+      <section class="sobre-nos" id="sobre-nos">
         <div class=main>
         <div class="titulo">
             <h1> Sobre nós</h1>
             <p>Fundada com muito carinho e dedicação, a SalgadosDulce é uma loja de salgados e doces artesanais que nasceu com o propósito de levar sabor e aconchego para os momentos inesquecíveis de nossos clientes. Localizada no coração do bairro, somos um negócio familiar que preza pela qualidade dos ingredientes, pelo atendimento próximo e pelo sabor caseiro que conquista desde a primeira mordida. De coxinhas crocantes a brigadeiros irresistíveis, cada produto é feito com amor para tornar seus momentos ainda mais especiais. </p>
-        </div>
-        <div class="image">
+          </div>
+          <div class="image">
             <img src="https://conteudo.imguol.com.br/c/entretenimento/2013/10/21/pato-donald-1382389513248_615x470.jpg" alt=""> 
-        </div>
-        </div>
-    </section>
-
-    <!-- Cardápio, botões de escolha, cards e falta adicionar imagem 
-    por as imagens em assets-->
+          </div>
+          </div>
+       </section>
+      <!-- Cardápio, botões de escolha, cards e falta adicionar imagem 
+       por as imagens em assets-->
     <section class="Cardapio" id="Cardapio">
         
      <h1> CARDÁPIO </h1>   
@@ -93,7 +85,6 @@
         <button>Salgados</button>
         <button>Kit festas</button>
         </div>
-
         <div class="Todos" >
           <div class="card">
             <img src="./assets/coxinha.jfif" alt="Produto">
@@ -269,100 +260,88 @@
             <p>R$ 9.50</p>
             <button onclick="adicionarAoCarrinho({ nome: 'Coca-Cola', preco: 9.50 })">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Sprite</h3>
             <p>R$ 9.50</p>
             <button onclick="adicionarAoCarrinho({ nome: 'Sprite', preco: 9.50 })">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Fanta Laranja</h3>
             <p>R$ 9.50</p>
             <button onclick="adicionarAoCarrinho({ nome: 'Fanta Laranja', preco: 9.50 })">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Guaraná Antarctica</h3>
             <p>R$ 9.50</p>
             <button onclick="adicionarAoCarrinho({ nome: 'Guaraná Antarctica', preco: 9.50 })">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Pepsi</h3>
             <p>R$ 9.50</p>
             <button onclick="adicionarAoCarrinho({ nome: 'Pepsi', preco: 9.50 })">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Kuat</h3>
             <p>R$ 9.50</p>
             <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Suco Laranja Natural (500ml)</h3>
             <p>R$ 10.00 </p>
             <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Suco de uva (500ml)</h3>
             <p>R$ 10.00 </p>
             <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Água sem gás (500ml)</h3>
             <p>R$ 3.00 </p>
             <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
           </div>
-
           <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWxJyaFHVOOSAPNqSWWs9VZ2bs-ZFSGwmHlqCK4ZWAyi7lAXM2m9Lf4U&s=10" alt="Produto">
             <h3>Suco Laranja Natural (500ml)</h3>
             <p>R$ 10.00 </p>
             <button onclick="adicionarAoCarrinho({ nome: 'Kuat', preco: 9.50})">Comprar</button>
           </div>
-
           
-
           </div>
           
       </section>
-
     <!-- ====== CONTATOS ====== -->
-           <footer class="contato" id="contatos">
-  <h2>CONTATE-NOS:</h2>
-  <div class="contato-container">
-    <div class="contato-item">
-      <i class="bi bi-whatsapp"></i>
-      <p>(81) 99999-9999</p>
-    </div>
-    <div class="contato-item">
-      <i class="bi bi-instagram"></i>
-      <p>@Naotemanada</p>
-    </div>
-    <div class="contato-item">
-      <i class="bi bi-geo-alt"></i>
-      <p>Av. Ali Embaixo, nº 123 <br> Recife - PE, Brasil</p>
-    </div>
-  </div>
-</footer>
+      <footer class="contato" id="contatos">
+            <h2>CONTATE-NOS:</h2>
+          <div class="contato-container">
+          <div class="contato-item">
+          <i class="bi bi-whatsapp"></i>
+           <p>(81) 99999-9999</p>
+          </div>
+          <div class="contato-item">
+          <i class="bi bi-instagram"></i>
+          <p>@Naotemanada</p>
+          </div>
+          <div class="contato-item">
+          <i class="bi bi-geo-alt"></i>
+          <p>Av. Ali Embaixo, nº 123 <br> Recife - PE, Brasil</p>
+         </div>
+       </div>
+    </footer>
 
    <!-- ====== RODAPÉ ====== -->
- <footer>
+     <footer>
      <h4> Desenvolvido por -> </h4>
    <p>&copy; 2025 Dulce Salgados - Todos os direitos reservados.</p>
-  </footer>
-<script src="script.js"></script>
+      </footer>
+    <script src="script.js"></script>
 </body>
 </html>
