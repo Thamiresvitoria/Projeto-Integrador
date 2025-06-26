@@ -10,8 +10,9 @@ O nossi grupo escolheu fazer um site onde serão vendidos doces e salgados, uma 
 
 Tecnologias usadas para criar a interface e experiência do usuário:
 
-- HTML, CSS (incluindo Flexbox e Grid)  
-- JavaScript 
+![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white&labelColor=1572B6)
+![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white&labelColor=E34F26)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&labelColor=F7DF1E)
 
 ---
 
@@ -19,7 +20,8 @@ Tecnologias usadas para criar a interface e experiência do usuário:
 
 Tecnologias e ferramentas que sustentam a lógica e dados do projeto:
 
-- 
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 
 ---
 
@@ -68,8 +70,6 @@ GitHub: thalison21
   - Vinícius Araújo
   - Thalison
   - Thamires Vitoria
-  - Larissa
-  - Jennifer
 
  ---
 
