@@ -91,12 +91,14 @@ Se tudo estiver certo, você verá:
   ``` cd NOME-DO-REPOSITORIO ```
   
 ### (Opcional) Crie uma nova branch
-git checkout -b minha-branch
+```git checkout -b minha-branch```
 
 ### Faça alterações
+```
 git add .
 git commit -m "Minhas mudanças"
 git push origin minha-branch
+```
 
 # 🔐 Regras Importantes
 
