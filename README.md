@@ -147,6 +147,7 @@ GitHub: thalison21
   - Vinícius Araújo
   - Thalison
   - Thamires Vitoria
+  - Larissa
 
  ---
 
