@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   // MENU TOGGLE
   const toggle = document.getElementById("menu-toggle");
@@ -118,4 +119,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchToggle.addEventListener('click', () => {
     mobileSearch.classList.toggle('active');
+  });
+  
+  
+  // Espera a página carregar completamente
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('cardapio.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('cardapio-container').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Erro ao carregar o cardápio:', error);
+      });
   });

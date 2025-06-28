@@ -559,11 +559,101 @@ footer {
     padding: 2rem;
 }
 
-/* Responsividade */
-
 /* RESPONSIVIDADE */
 
-/* Telas até 1024px (notebooks e tablets em landscape) */
+/* ================= Responsivo para 1920px ================= */
+@media (min-width: 1920px) {
+  html {
+    font-size: 65%;
+  }
+
+  .first-section h1 {
+    font-size: 8rem;
+  }
+
+  .first-section h2 {
+    font-size: 4rem;
+  }
+
+  .titulo h1 {
+    font-size: 6rem;
+  }
+
+  .titulo p {
+    font-size: 2.2rem;
+  }
+
+  .card h3 {
+    font-size: 2.4rem;
+  }
+
+  .card p,
+  .card button {
+    font-size: 1.8rem;
+  }
+
+  .contato h2 {
+    font-size: 2.5rem;
+  }
+
+  .contato-item p {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================= Responsivo para 440px ================= */
+@media (max-width: 440px) {
+  html {
+    font-size: 55%;
+  }
+
+  .logo img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .first-section h1 {
+    font-size: 3.2rem;
+  }
+
+  .first-section h2 {
+    font-size: 2rem;
+  }
+
+  .titulo h1 {
+    font-size: 3.2rem;
+    margin-left: 1rem;
+  }
+
+  .titulo p {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.8rem;
+  }
+
+  .card p,
+  .card button {
+    font-size: 1.6rem;
+  }
+
+  .contato h2 {
+    font-size: 2rem;
+  }
+
+  .contato-item p {
+    font-size: 1.4rem;
+  }
+
+  .menu button {
+    font-size: 1.5rem;
+    padding: 8px 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .buscar input {
     width: 350px;
@@ -589,7 +679,6 @@ footer {
   }
 
   .buscar input {
-    width: 80%;
   }
 
   .btn_buscar {
@@ -730,6 +819,19 @@ margin-right: 4rem;
 
 /* Menu toggle */
 
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-container {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-container.active {
+    display: block;
+  }
+
   .menu-container .list-menu {
   display: flex;
   align-items: center;
@@ -772,7 +874,8 @@ margin-right: 4rem;
 }
 
 /* Telas até 480px (celulares pequenos) */
-@media (max-width: 768px) {
+
+@media (max-width: 630px) {
   .form-busca {
     width: 100%;
     margin-top: 10px;
@@ -801,4 +904,14 @@ margin-right: 4rem;
   .list-menu li {
     margin: 5px 0;
   }
+  
+    .search-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2.3rem;
+    color: #fff; /* ajuste para a cor do seu site */
+    cursor: pointer;
+    margin-right: 3rem;
+  } 
 }
